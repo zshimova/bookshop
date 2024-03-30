@@ -1,0 +1,42 @@
+.container {
+  margin: 0 auto;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.header {
+  margin-top: 47px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Montserrat";
+}
+.header__logo {
+  font-family: "Montserrat";
+  font-size: 24px;
+  line-height: 29.26px;
+  color: #1C2A39;
+}
+.header__menu {
+  display: flex;
+  gap: 40px;
+  font-size: 10px;
+  line-height: 12.19px;
+  font-weight: bold;
+  list-style-type: none;
+}
+.header__menu-item {
+  color: #5C6A79;
+}
+.header-books {
+  color: #1C2A39;
+}
+.header__icons {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.header__icons-user, .header__icons-search, .header__icons-bag {
+  background-color: transparent;
+  border: none;
+}/*# sourceMappingURL=header.css.map */

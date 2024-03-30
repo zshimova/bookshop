@@ -1,0 +1,39 @@
+@import "./src/css/header/header.css";
+@import "./src/css/slider/slider.css";
+@import "./src/css/book-gallery/categories/categories.css";
+
+/* @import "./src/css/book-gallery/books/books.css"; */
+
+@font-face {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-style: normal;
+    src: url('./fonts/OpenSans.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-style: normal;
+    src: url('./fonts/Montserrat-Medium.woff2') format('woff2');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+button,
+a {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
