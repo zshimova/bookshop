@@ -77,10 +77,10 @@ document.querySelectorAll('book-gallery__category-item').forEach((item) => {
     });
 });
 
-function movecategory(num) {
-    parentCat.innerLinks += `<div class="link n${index} ${index === 0 ? 'active' : ''}" data-index="${index}">${images[index].title}</div>`;
-    updateSelectElement(num);
-};
+// function movecategory(num) {
+//     parentCat.innerLinks += `<div class="link n${index} ${index === 0 ? 'active' : ''}" data-index="${index}">${images[index].title}</div>`;
+//     updateSelectElement(num);
+// };
 
 document.addEventListener('click', (event) => {
     if (event.target.classList.contains('book-gallery__category-item')) {
