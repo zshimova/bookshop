@@ -35,7 +35,7 @@
         <div class="header__icons">
             <button class="header__icons-user"><img src="./src/img/icons/user.svg" alt=""></button>
             <button class="header__icons-search"><img src="./src/img/icons/search.svg" alt=""></button>
-            <button class="header__icons-bag"><img src="./src/img/icons/shop-bag.svg" alt=""></button>
+            <button class="header__icons-bag" id="chart"><img src="./src/img/icons/shop-bag.svg" alt=""></button>
         </div>
     </header>
     <main>
@@ -64,7 +64,7 @@
             <nav class="book-gallery__categories">
                 <ul>
                     <li class="book-gallery__category">
-                        <a class="book-gallery__category-item" data-category="subject:Architecture" href="">Architecture</a>
+                        <a class="book-gallery__category-item active" data-category="subject:Architecture" href="">Architecture</a>
                     </li>
                     <li class="book-gallery__category">
                         <a class="book-gallery__category-item" data-category="subject:Art & Fashion" href="">Art & Fashion</a>
@@ -113,15 +113,18 @@
                     </li>
                 </ul>
             </nav>
-            <div class="book-gallery__books">
-                <div class="book-gallery__book">
+            <div>
+                <div class="book-gallery__books">
                 </div>
+                <button id="load-more" class="load-more"><a class="" href="">LOAD MORE</a></button>
             </div>
+            
         </section>
     </main>
     <footer></footer>
     <script src="./src/js/slider.js"></script>
     <script src="./src/js/onloading.js"></script>
+    <script src="./src/js/buttons.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,7 @@
 @import "./src/css/header/header.css";
 @import "./src/css/slider/slider.css";
 @import "./src/css/book-gallery/categories/categories.css";
+@import "./src/css/book-gallery/books/books.css";
 
 /* @import "./src/css/book-gallery/books/books.css"; */
 
@@ -36,4 +37,45 @@ a {
 ul,
 li {
     list-style-type: none;
+}
+
+
+.btn.added{
+    margin: 0 auto;
+    padding: 18px 61px;
+    width: 176px;
+    display: flex;
+    border: 1px solid #5C6A79;
+    background: transparent;
+    font-size: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #5C6A79;
+}
+
+.btn,
+#load-more {
+    margin: 0 auto;
+    padding: 18px 61px;
+    width: 176px;
+    display: flex;
+    font-size: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    border: 1px solid #4C3DB2;
+    background: transparent;
+    color: #4C3DB2;
+}
+
+.btn a,
+#load-more a {
+    font-size: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #4C3DB2;
+
+}
+
+#load-more {
+    margin-bottom: 74px;
 }

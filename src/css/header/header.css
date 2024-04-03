@@ -39,4 +39,23 @@
 .header__icons-user, .header__icons-search, .header__icons-bag {
   background-color: transparent;
   border: none;
+}
+.header__icons-bag {
+  position: relative;
+  width: 14px;
+  height: auto;
+  background-image: url('../../img/icons/shop-bag.svg');
+  background-repeat: no-repeat;
+}
+.header__icons-bag .items-number {
+  background-color: #FF353A;
+  border-radius: 50%;
+  width: 13px;
+  height: auto;
+  position: absolute;
+  color: #FFFFFF;
+  padding: 4px;
+  top: 8px;
+  left: 4px;
+  font-size: 10px;
 }/*# sourceMappingURL=header.css.map */

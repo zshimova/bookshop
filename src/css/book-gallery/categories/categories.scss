@@ -1,7 +1,11 @@
 .book-gallery {
     position: relative;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
     font-family: 'Montserrat';
     ul {
+        gap: 23px;
+        display: grid;
         &::before {
             position: absolute;
             content: "";
@@ -12,12 +16,10 @@
             max-width: 416px;
             max-height: 710px;
             left: -148px;
-            top: -38px;
-            padding: 40px 0;
+            top: -43px;
         }
     }
     &__category {
-        margin-bottom: 23px;
         &-item.active {
             position: relative;
             font-size: 16px;

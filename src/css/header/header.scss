@@ -40,5 +40,24 @@
             background-color: transparent;
             border: none;
         }
+        &-bag {
+            position: relative;
+            width: 14px;
+            height: auto;
+            background-image: url('/src/img/icons/shop-bag.svg');
+            background-repeat: no-repeat;
+            .items-number {
+                background-color: #FF353A;
+                border-radius: 50%;
+                width: 13px;
+                height: auto;
+                position: absolute;
+                color: #FFFFFF;
+                padding: 4px;
+                top: 8px;
+                left: 4px;
+                font-size: 10px;
+            }
+        }
     }
 }

@@ -1,0 +1,70 @@
+.book-gallery {
+    &__books {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 76px;
+    }
+    &__book {
+        margin-bottom: 96px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 36px;
+        align-items: center;
+        &-img{
+            width: 212px;
+            height: 300px;
+            box-shadow: 0px 30px 17px -11px #EEECEC;
+                }
+    }
+    &__first-block {
+        display: grid;
+        gap: 4px;
+    }
+    &__second-block{
+        margin-top: 16px;
+        display: grid;
+        gap: 16px;
+    }
+    &__info {
+        max-width: 176px;
+    }
+    .description {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -moz-box;
+        -moz-box-orient: vertical;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        line-clamp: 3;
+        box-orient: vertical;
+    }
+    .author,
+    .description {
+        font-size: 10px;
+        font-family: 'Open-sans', sans-serif;
+        color: #5C6A79;
+    }
+    .title {
+        font-size: 16px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        color: #1C2A39;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .count {
+        font-size: 10px;
+        font-family: 'Open Sans', sans-serif;
+        color: #5C6A79;
+    }
+    .price {
+        font-size: 13px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        color: #1C2A39;
+    }
+}

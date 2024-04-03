@@ -1,7 +1,13 @@
 @charset "UTF-8";
 .book-gallery {
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
   font-family: "Montserrat";
+}
+.book-gallery ul {
+  gap: 23px;
+  display: grid;
 }
 .book-gallery ul::before {
   position: absolute;
@@ -13,11 +19,7 @@
   max-width: 416px;
   max-height: 710px;
   left: -148px;
-  top: -38px;
-  padding: 40px 0;
-}
-.book-gallery__category {
-  margin-bottom: 23px;
+  top: -43px;
 }
 .book-gallery__category-item.active {
   position: relative;

@@ -47,6 +47,7 @@
   right: -63px;
   max-width: 149px;
   background-color: #9E98DC;
+  box-shadow: 0px 30px 17px -11px #EEECEC;
 }
 .slider__promo-1 a {
   color: #1C2A39;
@@ -62,6 +63,7 @@
   left: 102%;
   max-width: 149px;
   background-color: #FF8FE6;
+  box-shadow: 0px 30px 17px -11px #EEECEC;
 }
 .slider__promo-2 a {
   color: #1C2A39;

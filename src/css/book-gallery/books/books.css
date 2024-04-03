@@ -1,0 +1,69 @@
+.book-gallery__books {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 76px;
+       column-gap: 76px;
+}
+.book-gallery__book {
+  margin-bottom: 96px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 36px;
+       column-gap: 36px;
+  align-items: center;
+}
+.book-gallery__book-img {
+  width: 212px;
+  height: 300px;
+  box-shadow: 0px 30px 17px -11px #EEECEC;
+}
+.book-gallery__first-block {
+  display: grid;
+  gap: 4px;
+}
+.book-gallery__second-block {
+  margin-top: 16px;
+  display: grid;
+  gap: 16px;
+}
+.book-gallery__info {
+  max-width: 176px;
+}
+.book-gallery .description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  box-orient: vertical;
+}
+.book-gallery .author,
+.book-gallery .description {
+  font-size: 10px;
+  font-family: "Open-sans", sans-serif;
+  color: #5C6A79;
+}
+.book-gallery .title {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: #1C2A39;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.book-gallery .count {
+  font-size: 10px;
+  font-family: "Open Sans", sans-serif;
+  color: #5C6A79;
+}
+.book-gallery .price {
+  font-size: 13px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: #1C2A39;
+}/*# sourceMappingURL=books.css.map */
