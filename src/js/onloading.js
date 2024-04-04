@@ -6,7 +6,6 @@ const getCountBooks = 6;
 
 
 // fetch запрос
-
 const bookRequest = () => {
     return fetch(`https://www.googleapis.com/books/v1/volumes?q="${activeTheme}"&key=${apiKey}&printType=books&startIndex=${currentStep}&maxResults=${getCountBooks}&langRestrict=en`)
         .then(response => {
@@ -15,50 +14,38 @@ const bookRequest = () => {
         .then((json) => {
             return json['items'];
         })
-        .catch(() => {
+        .catch((error) => {
             console.log(error)
         })
 };
-// console.log(bookRequest());
 
 
 // получение и отображение объектов
 const getAndShow = async() => {
     let books = await bookRequest();
-
     currentStep++
-
     books.forEach((book) => {
         let img = book.volumeInfo.imageLinks?.thumbnail??'./src/img/icons/logo.svg'; 
         let authors = book.volumeInfo?.authors??'';
         let title = book.volumeInfo.title;
-        let description = book.volumeInfo.description;
-        let averageRating = book.volumeInfo.averageRating;
-        if (averageRating) {
-            averageRating = book.volumeInfo.averageRating;
-        } else {
-            averageRating = '';
-        };
-
-        let ratingsCount = book.volumeInfo.ratingsCount;
-        if (book.ratingsCount) {
-            ratingsCount = book.ratingsCount + 'reviews';
-        } else {
-            ratingsCount = '';
+        let description = book.volumeInfo?.description??'No description';
+        let averageRating = book.volumeInfo?.averageRating??'';
+        let rev = ` reviews`;
+        let ratingsCount = book.volumeInfo?.ratingsCount??'';
+        if (ratingsCount) {
+            ratingsCount = book.volumeInfo.ratingsCount + rev
         };
 
         let saleability = book.saleInfo.saleability;
-        let cost = 'Not for sale';
+        let cost = 'Without price';
         let costType = '';
-
         if (saleability === 'FOR_SALE') {
             cost = book.saleInfo.retailPrice?.amount;
             costType = book.saleInfo.retailPrice?.currencyCode;
         };
-
      
         // отрисовка книги
-        const newBook = `<div class="book-gallery__book" id="${book.id}">
+        let newBook = `<div class="book-gallery__book" id="${book.id}">
             <img src="${img}" alt="${book.title}" class="book-gallery__book-img">
             <div class="book-gallery__info">
                 <div class="book-gallery__first-block">
@@ -88,13 +75,13 @@ const getAndShow = async() => {
         document.querySelector('.book-gallery__books').innerHTML += newBook;
 
 
-        // Отризовка averageRating звездочек
+        // Отрисовка averageRating звездочек
         const currentBook = document.getElementById(book.id);
         let stars = Array.from(currentBook.querySelectorAll('.review-star'));
+        
+        if (book.averageRating && book.ratingsCount) {
 
-        if (book.averageRrating && book.reviews) {
-
-            if (!Number.isInteger(book.averageRating)) {
+            if (!Number.isInteger(book.volumeInfo.averageRating)) {
                 book.averageRating = Math.floor(book.averageRating);
             }
             switch (book.averageRating) {
