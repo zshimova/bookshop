@@ -1,7 +1,7 @@
 // переменные
 const apiKey = 'AIzaSyC4NQMdGh19j2ElPgpWDLaXsdb7k_C_rLQ';
-const activeTheme = document.querySelector('.book-gallery__category-item').getAttribute('data-category');
-const currentStep = 0;
+let activeTheme = document.querySelector('.book-gallery__category-item').getAttribute('data-category');
+let currentStep = 0;
 const getCountBooks = 6;
 
 
@@ -26,30 +26,28 @@ const bookRequest = () => {
 const getAndShow = async() => {
     let books = await bookRequest();
 
-    // currentStep++
+    currentStep++
 
     books.forEach((book) => {
-        const volumeInfo = book.volumeInfo;
-        let bookInfo = {};
         let img = book.volumeInfo.imageLinks?.thumbnail??'./src/img/icons/logo.svg'; 
         let authors = book.volumeInfo?.authors??'';
         let title = book.volumeInfo.title;
         let description = book.volumeInfo.description;
         let averageRating = book.volumeInfo.averageRating;
-
-        if (book.averageRating ) {
-
+        if (averageRating) {
+            averageRating = book.volumeInfo.averageRating;
+        } else {
+            averageRating = '';
         };
 
         let ratingsCount = book.volumeInfo.ratingsCount;
         if (book.ratingsCount) {
-            ratingsCount = book.ratingsCount;
+            ratingsCount = book.ratingsCount + 'reviews';
         } else {
-            ratingsCount = 0;
-        }
+            ratingsCount = '';
+        };
 
         let saleability = book.saleInfo.saleability;
-        let selfLink = book.selfLink;
         let cost = 'Not for sale';
         let costType = '';
 
@@ -68,19 +66,22 @@ const getAndShow = async() => {
                     <h2 class="title">${title}</h2>
                     <div class="rating">
                         <div class="review-stars">${averageRating}
-                            <img src="./src/img/icons/gray-star.svg" class="review-star">
-                            <img src="./src/img/icons/gray-star.svg" class="review-star">
-                            <img src="./src/img/icons/gray-star.svg" class="review-star">
-                            <img src="./src/img/icons/gray-star.svg" class="review-star">
-                            <img src="./src/img/icons/gray-star.svg" class="review-star">
+                            <div class="count">${ratingsCount}<span></span></div>
+                            <div class="stars">
+                                <img src="./src/img/icons/gray-star.svg" class="review-star">
+                                <img src="./src/img/icons/gray-star.svg" class="review-star">
+                                <img src="./src/img/icons/gray-star.svg" class="review-star">
+                                <img src="./src/img/icons/gray-star.svg" class="review-star">
+                                <img src="./src/img/icons/gray-star.svg" class="review-star">
+                            </div>
                         </div>
-                        <div class="count">${ratingsCount}<span> review</span></div>
+                        
                     </div>
                 </div>
                 <div class="book-gallery__second-block">
                     <p class="description">${description}</p>
                     <span class="price">${cost}${costType}</span>
-                    <button class="btn" id="${book.id}"><a class="" href="" onclick="return false;">BUY NOW</a></button>
+                    <button class="btn" id="${book.id}"><a class="" href="#" onclick="return false;">BUY NOW</a></button>
                 </div>
             </div>
         </div>`;
@@ -89,7 +90,7 @@ const getAndShow = async() => {
 
         // Отризовка averageRating звездочек
         const currentBook = document.getElementById(book.id);
-        let stars = Array.from(currentBook.getElementsByClassName('review-star'));
+        let stars = Array.from(currentBook.querySelectorAll('.review-star'));
 
         if (book.averageRrating && book.reviews) {
 
@@ -127,6 +128,7 @@ const getAndShow = async() => {
             }
         }
         stars = [];
+        console.log(stars)
     })
 
 
