@@ -23,7 +23,7 @@ const bookRequest = () => {
 // получение и отображение объектов
 const getAndShow = async() => {
     let books = await bookRequest();
-    currentStep++
+    currentStep += getCountBooks;
     books.forEach((book) => {
         let img = book.volumeInfo.imageLinks?.thumbnail??'./src/img/icons/logo.svg'; 
         let authors = book.volumeInfo?.authors??'';
@@ -52,7 +52,7 @@ const getAndShow = async() => {
                     <h3 class="author">${authors}</h3>
                     <h2 class="title">${title}</h2>
                     <div class="rating">
-                        <div class="review-stars">${averageRating}
+                        <div class="review-stars">
                             <div class="count">${ratingsCount}<span></span></div>
                             <div class="stars">
                                 <img src="./src/img/icons/gray-star.svg" class="review-star">
@@ -77,47 +77,14 @@ const getAndShow = async() => {
 
         // Отрисовка averageRating звездочек
         const currentBook = document.getElementById(book.id);
-        let stars = Array.from(currentBook.querySelectorAll('.review-star'));
-        
-        if (book.averageRating && book.ratingsCount) {
+        let stars = currentBook.querySelectorAll('.review-star');
 
-            if (!Number.isInteger(book.volumeInfo.averageRating)) {
-                book.averageRating = Math.floor(book.averageRating);
-            }
-            switch (book.averageRating) {
-                case 1:
-                    stars[0].src = './src/icons/gold-star.svg';
-                    break;
-                case 2:
-                    stars[0].src = './src/icons/gold-star.svg';
-                    stars[1].src = './src/icons/gold-star.svg';
-                    break;
-                case 3:
-                    stars[0].src = './src/icons/gold-star.svg';
-                    stars[1].src = './src/icons/gold-star.svg';
-                    stars[2].src = './src/icons/gold-star.svg';
-                    break;
-                case 4:
-                    stars[0].src = './src/icons/gold-star.svg';
-                    stars[1].src = './src/icons/gold-star.svg';
-                    stars[2].src = './src/icons/gold-star.svg';
-                    stars[3].src = './src/icons/gold-star.svg';
-                    break;
-                case 5:
-                    stars[0].src = './src/icons/gold-star.svg';
-                    stars[1].src = './src/icons/gold-star.svg';
-                    stars[2].src = './src/icons/gold-star.svg';
-                    stars[3].src = './src/icons/gold-star.svg';
-                    stars[4].src = './src/icons/gold-star.svg';
-                    break;
-                default:
-                    console.log('default');
-            }
+        // Установка золотых звездочек в зависимости от среднего рейтинга
+        let rating = Math.floor(book.volumeInfo.averageRating); // Округление в меньшую сторону, если необходимо
+        for (let i = 0; i < rating; i++) {    
+            stars[i].src = './src/img/icons/gold-star.svg'; 
         }
-        stars = [];
-        console.log(stars)
     })
-
 
 
     // добавление в корзину
@@ -163,11 +130,11 @@ getAndShow();
 // Смена категории и загрузка следующих 6-и книг
 document.addEventListener('click', (event) => {
     if (event.target.classList.contains('book-gallery__category-item')) {
+        event.preventDefault();
         document.querySelector('.book-gallery__category-item.active')?.classList?.remove('active');
         event.target.classList.add('active');
         document.querySelector('.book-gallery__books').innerHTML='';
         activeTheme = event.target.innerText;
-        console.log(activeTheme);
         getAndShow();
     }
     if (event.target.classList.contains('load-more')) {
