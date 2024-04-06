@@ -6,37 +6,34 @@
 
 .sticky {
   margin-top: 55px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header {
   position: sticky;
   top: -1px;
-  height: 47px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   z-index: 9;
-}
-.header__logo {
-  font-family: "Montserrat";
-  font-size: 24px;
-  line-height: 29.26px;
-  color: #1C2A39;
 }
 .header__menu {
   display: flex;
+  align-items: center;
   gap: 40px;
   font-size: 10px;
-  line-height: 12.19px;
-  font-weight: bold;
-  list-style-type: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
 }
 .header__menu-item {
   color: #5C6A79;
 }
 .header-books {
+  font-weight: 900;
   color: #1C2A39;
 }
 .header__icons {

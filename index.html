@@ -6,36 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookshop</title>
     <link rel="icon" href="./src/img/icons/logo.svg" type="image/x-icon">
-    </linkrel>
     <link rel="stylesheet" href="style.css">
     <link rel="normalize" href="normalize.css">
 </head>
 
 <body>
-    <header class="header sticky container">
-        <h2>
-            <a class="header__logo" href="#">Bookshop</a>
-        </h2>
-        <nav class="">
-            <ul class="header__menu">
-                <li>
-                    <a class="header__menu-item header-books" href="">BOOKS</a>
-                </li>
-                <li>
-                    <a class="header__menu-item" href="">AUDIOBOOKS</a>
-                </li>
-                <li>
-                    <a class="header__menu-item" href="">STATIONERY & GIFTS</a>
-                </li>
-                <li>
-                    <a class="header__menu-item" href="">BLOG</a>
-                </li>
-            </ul>
-        </nav>
-        <div class="header__icons">
-            <button class="header__icons-user"><img src="./src/img/icons/user.svg" alt=""></button>
-            <button class="header__icons-search"><img src="./src/img/icons/search.svg" alt=""></button>
-            <button class="header__icons-bag" id="chart"><img src="./src/img/icons/shop-bag.svg" alt=""></button>
+    <header class="header">
+        <div class="sticky container">
+            <a class="header__logo">
+                <img src="./src/img/icons/logo.svg" alt="logo">
+            </a>
+            <nav class="">
+                <ul class="header__menu">
+                    <li>
+                        <a class="header__menu-item header-books" href="">BOOKS</a>
+                    </li>
+                    <li>
+                        <a class="header__menu-item" href="">AUDIOBOOKS</a>
+                    </li>
+                    <li>
+                        <a class="header__menu-item" href="">STATIONERY & GIFTS</a>
+                    </li>
+                    <li>
+                        <a class="header__menu-item" href="">BLOG</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__icons">
+                <button class="header__icons-user"><img src="./src/img/icons/user.svg" alt=""></button>
+                <button class="header__icons-search"><img src="./src/img/icons/search.svg" alt=""></button>
+                <button class="header__icons-bag" id="chart"><img src="./src/img/icons/shop-bag.svg" alt=""></button>
+            </div>
         </div>
     </header>
     <main>
@@ -122,9 +123,7 @@
         </section>
     </main>
     <footer></footer>
-    <script src="./src/js/slider.js"></script>
-    <script src="./src/js/onloading.js"></script>
-    <script src="./src/js/buttons.js"></script>
+    <script type="module" src="./index.js"></script>
 </body>
 
 </html>

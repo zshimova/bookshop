@@ -1,4 +1,5 @@
-// переменные
+let onloading = () => {
+    // переменные
 const apiKey = 'AIzaSyC4NQMdGh19j2ElPgpWDLaXsdb7k_C_rLQ';
 let activeTheme = document.querySelector('.book-gallery__category-item').getAttribute('data-category');
 let currentStep = 0;
@@ -26,7 +27,7 @@ const getAndShow = async() => {
     currentStep += getCountBooks;
     books.forEach((book) => {
         let img = book.volumeInfo.imageLinks?.thumbnail??'./src/img/icons/logo.svg'; 
-        let authors = book.volumeInfo?.authors??'';
+        let authors = book.volumeInfo.authors?.join(', ') ?? 'Unknown Author';
         let title = book.volumeInfo.title;
         let description = book.volumeInfo?.description??'No description';
         let averageRating = book.volumeInfo?.averageRating??'';
@@ -141,3 +142,7 @@ document.addEventListener('click', (event) => {
         getAndShow();
     }
 })
+
+}
+
+export {onloading}

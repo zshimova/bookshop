@@ -3,8 +3,6 @@
 @import "./src/css/book-gallery/categories/categories.css";
 @import "./src/css/book-gallery/books/books.css";
 
-/* @import "./src/css/book-gallery/books/books.css"; */
-
 @font-face {
     font-family: 'Open Sans';
     font-weight: 400;

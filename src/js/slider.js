@@ -1,4 +1,5 @@
- let images = [{
+let slider = () => {
+    let images = [{
         url: './src/img/banners/banner.svg',
         title: "Black Friday Sale banner"
     }, {
@@ -106,7 +107,8 @@
         initSlider(images, sliderOptions);
     });
 
+}
 
 
 
-// export { slider };
+export { slider };
