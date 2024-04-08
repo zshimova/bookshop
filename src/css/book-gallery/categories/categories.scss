@@ -2,10 +2,12 @@
     position: relative;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    font-family: 'Montserrat';
+    font-family: Montserrat, sans-serif;
+
     ul {
         gap: 23px;
         display: grid;
+
         &::before {
             position: absolute;
             content: "";
@@ -19,12 +21,14 @@
             top: -43px;
         }
     }
+
     &__category {
         &-item.active {
             position: relative;
             font-size: 16px;
             font-weight: bold;
             color: #1C2A39;
+
             &::before {
                 position: absolute;
                 content: "•";
@@ -34,6 +38,7 @@
                 color: #764abc;
             }
         }
+
         &-item {
             font-size: 12px;
             font-weight: 500;

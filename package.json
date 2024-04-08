@@ -4,12 +4,27 @@
   "description": "pet-project for bookshop",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "test",
+    "build": "webpack",
+    "build:watch": "webpack --watch"
   },
   "author": "zlata shimova",
   "license": "ISC",
   "devDependencies": {
+    "css-loader": "^7.0.0",
+    "css-minimizer-webpack-plugin": "^6.0.0",
+    "eslint": "^8.0.0",
+    "eslint-webpack-plugin": "^4.1.0",
+    "html-webpack-plugin": "^5.6.0",
+    "mini-css-extract-plugin": "^2.8.1",
+    "pug": "^2.0.4",
+    "pug-loader": "^2.4.0",
+    "sass-loader": "^14.1.1",
+    "style-loader": "^3.3.4",
     "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "node-sass": "^9.0.0"
   }
 }

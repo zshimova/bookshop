@@ -1,14 +1,17 @@
 @charset "UTF-8";
+
 .book-gallery {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 4fr;
-  font-family: "Montserrat";
+  font-family: 'Montserrat', sans-serif;
 }
+
 .book-gallery ul {
   gap: 23px;
   display: grid;
 }
+
 .book-gallery ul::before {
   position: absolute;
   content: "";
@@ -21,12 +24,14 @@
   left: -148px;
   top: -43px;
 }
+
 .book-gallery__category-item.active {
   position: relative;
   font-size: 16px;
   font-weight: bold;
   color: #1C2A39;
 }
+
 .book-gallery__category-item.active::before {
   position: absolute;
   content: "•";
@@ -35,8 +40,9 @@
   font-size: 25px;
   color: #764abc;
 }
+
 .book-gallery__category-item {
   font-size: 12px;
   font-weight: 500;
   color: #5C6A79;
-}/*# sourceMappingURL=categories.css.map */
+}

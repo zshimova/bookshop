@@ -17,47 +17,54 @@
     top: -1px;
     display: flex;
     align-items: center;
-    background-color: #ffffff;
-    font-family: 'Montserrat',sans-serif;
+    background-color: #fff;
+    font-family: Montserrat,sans-serif;
     z-index: 9;
+
     &__menu {
         display: flex;
         align-items: center;
         gap: 40px;
         font-size: 10px;
-        font-family: 'Montserrat',sans-serif;
+        font-family: Montserrat,sans-serif;
         font-weight: 700;
+
         &-item {
             color: #5C6A79;
         }
     }
+
     &-books {
         font-weight: 900;
         color: #1C2A39;
     }
+
     &__icons {
         display: flex;
         justify-content: space-between;
         gap: 40px;
+
         &-user,
         &-search,
         &-bag {
             background-color: transparent;
             border: none;
         }
+
         &-bag {
             position: relative;
             width: 14px;
             height: auto;
             background-image: url('/src/img/icons/shop-bag.svg');
             background-repeat: no-repeat;
+
             .items-number {
                 background-color: #FF353A;
                 border-radius: 50%;
                 width: 13px;
                 height: auto;
                 position: absolute;
-                color: #FFFFFF;
+                color: #FFF;
                 padding: 4px;
                 top: 8px;
                 left: 4px;

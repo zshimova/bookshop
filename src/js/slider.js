@@ -18,7 +18,7 @@ let slider = () => {
             titles: false,
             autoplay: false,
             autoplayInterval: 5000
-        }
+        };
     
         const sliderWrapper = document.querySelector(".slider");
         const sliderImages = sliderWrapper.querySelector(".slider__images");
@@ -103,11 +103,11 @@ let slider = () => {
             titles: false,
             autoplay: true,
             autoplayInterval: 5000
-        }
+        };
         initSlider(images, sliderOptions);
     });
 
-}
+};
 
 
 

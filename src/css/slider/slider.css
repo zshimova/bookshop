@@ -1,13 +1,15 @@
 .slider {
   position: relative;
   margin: 0 auto 130px;
-  font-family: "Montserrat";
+  font-family: 'Montserrat', sans-serif;
 }
+
 .slider__images {
   position: relative;
   width: 1120px;
   height: 702px;
 }
+
 .slider__images .image {
   background-size: cover;
   background-position: center center;
@@ -19,9 +21,11 @@
   opacity: 0;
   transition: opacity 800ms ease;
 }
+
 .slider__images .image.active {
   opacity: 1;
 }
+
 .slider__dots {
   position: absolute;
   margin-top: 17px;
@@ -29,6 +33,7 @@
   justify-content: center;
   width: 100%;
 }
+
 .slider__dots-item {
   margin: 0 5px;
   width: 10px;
@@ -38,43 +43,51 @@
   transition: background 0.4s ease;
   cursor: pointer;
 }
+
 .slider__dots-item:hover, .slider__dots-item.active {
   background: #9E98DC;
 }
+
 .slider__promo-1 {
   position: absolute;
   top: 82px;
   right: -63px;
   max-width: 149px;
   background-color: #9E98DC;
-  box-shadow: 0px 30px 17px -11px #EEECEC;
+  box-shadow: 0 30px 17px -11px #EEECEC;
 }
+
 .slider__promo-1 a {
   color: #1C2A39;
   font-size: 18px;
   font-weight: bold;
 }
+
 .slider__promo-1 a p {
   padding: 102px 20px 36px;
 }
+
 .slider__promo-2 {
   position: absolute;
   bottom: 70px;
   left: 102%;
   max-width: 149px;
   background-color: #FF8FE6;
-  box-shadow: 0px 30px 17px -11px #EEECEC;
+  box-shadow: 0 30px 17px -11px #EEECEC;
 }
+
 .slider__promo-2 a {
   color: #1C2A39;
   font-size: 18px;
   font-weight: bold;
 }
+
 .slider__promo-2 a p {
   padding: 149px 47px 36px 21px;
 }
+
 .slider__promo-arrow {
   position: absolute;
   bottom: 20px;
   left: 20px;
-}/*# sourceMappingURL=slider.css.map */
+}

@@ -16,8 +16,8 @@ const bookRequest = () => {
             return json['items'];
         })
         .catch((error) => {
-            console.log(error)
-        })
+            console.log(error);
+        });
 };
 
 
@@ -30,12 +30,11 @@ const getAndShow = async() => {
         let authors = book.volumeInfo.authors?.join(', ') ?? 'Unknown Author';
         let title = book.volumeInfo.title;
         let description = book.volumeInfo?.description??'No description';
-        let averageRating = book.volumeInfo?.averageRating??'';
         let rev = ` reviews`;
         let ratingsCount = book.volumeInfo?.ratingsCount??'';
         if (ratingsCount) {
-            ratingsCount = book.volumeInfo.ratingsCount + rev
-        };
+            ratingsCount = book.volumeInfo.ratingsCount + rev;
+        }
 
         let saleability = book.saleInfo.saleability;
         let cost = 'Without price';
@@ -43,7 +42,7 @@ const getAndShow = async() => {
         if (saleability === 'FOR_SALE') {
             cost = book.saleInfo.retailPrice?.amount;
             costType = book.saleInfo.retailPrice?.currencyCode;
-        };
+        }
      
         // отрисовка книги
         let newBook = `<div class="book-gallery__book" id="${book.id}">
@@ -85,7 +84,7 @@ const getAndShow = async() => {
         for (let i = 0; i < rating; i++) {    
             stars[i].src = './src/img/icons/gold-star.svg'; 
         }
-    })
+    });
 
 
     // добавление в корзину
@@ -141,8 +140,8 @@ document.addEventListener('click', (event) => {
     if (event.target.classList.contains('load-more')) {
         getAndShow();
     }
-})
+});
 
-}
+};
 
-export {onloading}
+export {onloading};

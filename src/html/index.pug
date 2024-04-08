@@ -1,0 +1,95 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Bookshop
+    link(rel='icon', href='./src/img/icons/logo.svg', type='image/x-icon')
+    link(rel='stylesheet', type='text/css', href='./output/main.css')
+    link(rel='normalize', type='text/css', href='normalize.css')
+  body
+    header.header
+      .sticky.container
+        a.header__logo
+          img(src='./src/img/icons/logo.svg', alt='logo')
+        nav
+          ul.header__menu
+            li
+              a.header__menu-item.header-books(href='') BOOKS
+            li
+              a.header__menu-item(href='') AUDIOBOOKS
+            li
+              a.header__menu-item(href='') STATIONERY &amp; GIFTS
+            li
+              a.header__menu-item(href='') BLOG
+        .header__icons
+          button.header__icons-user
+            img(src='./src/img/icons/user.svg', alt='')
+          button.header__icons-search
+            img(src='./src/img/icons/search.svg', alt='')
+          button#chart.header__icons-bag
+            img(src='./src/img/icons/shop-bag.svg', alt='')
+    main
+      section.slider.container
+        .slider__images
+        .slider__links
+          .slider__promo-1
+            a(href='')
+              p
+                | CHANGE
+                br
+                | OLD BOOK
+                br
+                | ON NEW
+              img.slider__promo-arrow(src='./src/img/icons/arrow.svg', alt='')
+          .slider__promo-2
+            a(href='')
+              p
+                | TOP
+                br
+                | 100
+                br
+                | BOOKS
+                br
+                | 2022
+              img.slider__promo-arrow(src='./src/img/icons/arrow.svg', alt='')
+      section.book-gallery.container
+        nav.book-gallery__categories
+          ul
+            li.book-gallery__category
+              a.book-gallery__category-item.active(data-category='subject:Architecture', href='#') Architecture
+            li.book-gallery__category
+              a.book-gallery__category-item(data-category='subject:Art & Fashion', href='#') Art &amp; Fashion
+            li.book-gallery__category
+              a.book-gallery__category-item(data-category='subject:Biography', href='#') Biography
+            li.book-gallery__category
+              a.book-gallery__category-item(data-category='subject:Business', href='#') Business
+            li.book-gallery__category
+              a.book-gallery__category-item(data-category='subject:Crafts & Hobbies', href='#') Crafts &amp; Hobbies
+            li.book-gallery__category
+              a.book-gallery__category-item(data-category='subject:Drama', href='#') Drama
+            li.book-gallery__category
+              a.book-gallery__category-item(data-category='subject:Fiction', href='#') Fiction
+            li.book-gallery__category
+              a.book-gallery__category-item(data-category='subject:Food & Drink', href='#') Food &amp; Drink
+            li.book-gallery__category
+              a.book-gallery__category-item(data-category='subject:Health & Wellbeing', href='#') Health &amp; Wellbeing
+            li.book-gallery__category
+              a.book-gallery__category-item(data-category='subject:History & Politics', href='#') History &amp; Politics
+            li.book-gallery__category
+              a.book-gallery__category-item(data-category='subject:Humor', href='#') Humor
+            li.book-gallery__category
+              a.book-gallery__category-item(data-category='subject:Poetry', href='#') Poetry
+            li.book-gallery__category
+              a.book-gallery__category-item(data-category='subject:Psychology', href='#') Psychology
+            li.book-gallery__category
+              a.book-gallery__category-item(data-category='subject:Science', href='#') Science
+            li.book-gallery__category
+              a.book-gallery__category-item(data-category='subject:Technology', href='#') Technology
+            li.book-gallery__category
+              a.book-gallery__category-item(data-category='subject:Travel & Maps', href='#') Travel &amp; Maps
+        div
+          .book-gallery__books
+          button#load-more.load-more LOAD MORE
+    footer
+    script(type='text/javascript', src='./output/main.js')
