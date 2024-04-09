@@ -1,57 +1,49 @@
 @charset "UTF-8";
-
 .book-gallery__books {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 76px;
        column-gap: 76px;
 }
-
 .book-gallery__book {
   margin-bottom: 96px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 36px;
+  -moz-column-gap: 36px;
+       column-gap: 36px;
   align-items: center;
 }
-
 .book-gallery__book-img {
   width: 212px;
   height: 300px;
   box-shadow: 0 30px 17px -11px #EEECEC;
 }
-
 .book-gallery__first-block {
   display: grid;
   gap: 4px;
 }
-
 .book-gallery__second-block {
   margin-top: 16px;
   display: grid;
   gap: 16px;
 }
-
 .book-gallery__info {
   max-width: 176px;
 }
-
 .book-gallery .description {
   overflow: hidden;
   text-overflow: ellipsis;
-  display: -moz-box;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   line-clamp: 3;
 }
-
 .book-gallery .author,
 .book-gallery .description {
   font-size: 10px;
   font-family: Open-sans, sans-serif;
   color: #5C6A79;
 }
-
 .book-gallery .title {
   font-size: 16px;
   font-family: Montserrat, sans-serif;
@@ -63,20 +55,17 @@
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
-
 .book-gallery .count {
   font-size: 10px;
   font-family: "Open Sans", sans-serif;
   color: #5C6A79;
 }
-
 .book-gallery .price {
   font-size: 13px;
   font-family: Montserrat, sans-serif;
   font-weight: bold;
   color: #1C2A39;
 }
-
 .book-gallery .review-stars {
   display: flex;
   flex-direction: row-reverse;
@@ -88,18 +77,35 @@
   color: #5C6A79;
 }
 
+@media only screen and (max-width: 1023px) {
+  .book-gallery {
+    display: block !important;
+  }
+  .book-gallery ul {
+    display: inline-flex !important;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  .book-gallery ul::before {
+    left: 0;
+    max-height: 290px;
+    max-width: 416px;
+  }
+  .book-gallery__books, .book-gallery__book {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .book-gallery {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 4fr;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
 }
-
 .book-gallery ul {
   gap: 23px;
   display: grid;
 }
-
 .book-gallery ul::before {
   position: absolute;
   content: "";
@@ -112,14 +118,12 @@
   left: -148px;
   top: -43px;
 }
-
 .book-gallery__category-item.active {
   position: relative;
   font-size: 16px;
   font-weight: bold;
   color: #1C2A39;
 }
-
 .book-gallery__category-item.active::before {
   position: absolute;
   content: "•";
@@ -128,7 +132,6 @@
   font-size: 25px;
   color: #764abc;
 }
-
 .book-gallery__category-item {
   font-size: 12px;
   font-weight: 500;
@@ -158,7 +161,6 @@
   font-family: Montserrat, sans-serif;
   z-index: 9;
 }
-
 .header__menu {
   display: flex;
   align-items: center;
@@ -167,27 +169,22 @@
   font-family: Montserrat, sans-serif;
   font-weight: 700;
 }
-
 .header__menu-item {
   color: #5C6A79;
 }
-
 .header-books {
   font-weight: 900;
   color: #1C2A39;
 }
-
 .header__icons {
   display: flex;
   justify-content: space-between;
   gap: 40px;
 }
-
 .header__icons-user, .header__icons-search, .header__icons-bag {
   background-color: transparent;
   border: none;
 }
-
 .header__icons-bag {
   position: relative;
   width: 14px;
@@ -195,7 +192,6 @@
   background-image: url("/src/img/icons/shop-bag.svg");
   background-repeat: no-repeat;
 }
-
 .header__icons-bag .items-number {
   background-color: #FF353A;
   border-radius: 50%;
@@ -209,18 +205,26 @@
   font-size: 10px;
 }
 
+@media only screen and (max-width: 1023px) {
+  .header__menu {
+    margin: 30px auto;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .sticky {
+    flex-direction: column;
+  }
+}
 .slider {
   position: relative;
   margin: 0 auto 130px;
   font-family: Montserrat, sans-serif;
 }
-
 .slider__images {
   position: relative;
-  width: 1120px;
+  width: auto;
   height: 702px;
 }
-
 .slider__images .image {
   background-size: cover;
   background-position: center center;
@@ -232,11 +236,9 @@
   opacity: 0;
   transition: opacity 800ms ease;
 }
-
 .slider__images .image.active {
   opacity: 1;
 }
-
 .slider__dots {
   position: absolute;
   margin-top: 17px;
@@ -244,7 +246,6 @@
   justify-content: center;
   width: 100%;
 }
-
 .slider__dots-item {
   margin: 0 5px;
   width: 10px;
@@ -254,11 +255,9 @@
   transition: background 0.4s ease;
   cursor: pointer;
 }
-
 .slider__dots-item:hover, .slider__dots-item.active {
   background: #9E98DC;
 }
-
 .slider__promo-1 {
   position: absolute;
   top: 82px;
@@ -267,17 +266,14 @@
   background-color: #9E98DC;
   box-shadow: 0 30px 17px -11px #EEECEC;
 }
-
 .slider__promo-1 a {
   color: #1C2A39;
   font-size: 18px;
   font-weight: bold;
 }
-
 .slider__promo-1 a p {
   padding: 102px 20px 36px;
 }
-
 .slider__promo-2 {
   position: absolute;
   bottom: 70px;
@@ -286,30 +282,31 @@
   background-color: #FF8FE6;
   box-shadow: 0 30px 17px -11px #EEECEC;
 }
-
 .slider__promo-2 a {
   color: #1C2A39;
   font-size: 18px;
   font-weight: bold;
 }
-
 .slider__promo-2 a p {
   padding: 149px 47px 36px 21px;
 }
-
 .slider__promo-arrow {
   position: absolute;
   bottom: 20px;
   left: 20px;
 }
 
+@media only screen and (max-width: 1023px) {
+  .slider__links {
+    display: none;
+  }
+}
 @font-face {
   font-family: Montserrat;
   font-weight: 500;
   font-style: normal;
   src: url("./fonts/Montserrat-Medium.woff2") format("woff2");
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -367,4 +364,4 @@ li {
 
 #load-more {
   margin-bottom: 74px;
-}
+}/*# sourceMappingURL=style.css.map */

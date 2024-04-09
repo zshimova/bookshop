@@ -5,7 +5,7 @@
 
     &__images {
         position: relative;
-        width: 1120px;
+        width: auto;
         height: 702px;
 
         .image {
@@ -93,4 +93,12 @@
             left: 20px;
         }
     }
+}
+
+@media only screen and (max-width: 1023px) {
+    .slider {
+        &__links {
+        display: none;
+    }   
+}
 }

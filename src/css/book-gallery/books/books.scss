@@ -87,4 +87,25 @@
     }
 }
 
-
+@media only screen and (max-width: 1023px) {
+    .book-gallery {
+        display: block !important;
+        ul {
+            margin-bottom: 25px;
+            display: inline-flex !important;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            &::before {
+                left: 0 !important;
+                max-height: 290px !important;
+                max-width: 416px !important;
+            }
+        }
+        &__books,
+        &__book {
+            display: flex;
+            flex-direction: column;
+        }
+}
+}
