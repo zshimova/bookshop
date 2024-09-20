@@ -30,6 +30,11 @@ html(lang='en')
           button#chart.header__icons-bag
             img(src='./src/img/icons/shop-bag.svg', alt='bag-icon')
     main
+      .popup-cart#popup-cart(style='display: none;')
+        .popup-content
+          h2 Корзина
+          .cart-items#cart-items
+          button#close-popup Закрыть
       section.slider.container
         .slider__images
         .slider__links

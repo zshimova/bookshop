@@ -81,14 +81,16 @@
     display: block !important;
   }
   .book-gallery ul {
+    margin-bottom: 25px;
     display: inline-flex !important;
     gap: 15px;
     flex-wrap: wrap;
+    justify-content: center;
   }
   .book-gallery ul::before {
-    left: 0;
-    max-height: 290px;
-    max-width: 416px;
+    left: 0 !important;
+    max-height: 290px !important;
+    max-width: 416px !important;
   }
   .book-gallery__books, .book-gallery__book {
     display: flex;

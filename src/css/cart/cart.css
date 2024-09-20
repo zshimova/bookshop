@@ -1,0 +1,65 @@
+.popup-cart {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.popup-cart .popup-content {
+  padding: 20px;
+  width: 100%;
+  max-width: 320px;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 8px;
+  text-align: center;
+}
+.popup-cart .popup-content h2 {
+  font-family: "Montserrat", sans-serif;
+}
+.popup-cart .popup-content #cart-items {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0;
+}
+.popup-cart .popup-content #cart-items .cart-item {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.popup-cart .popup-content #cart-items .cart-item span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  text-align: left;
+}
+.popup-cart .popup-content #cart-items .cart-item button {
+  margin: 0;
+  padding: 18px 41px;
+  width: 120px;
+  display: flex;
+  font-size: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  border: 1px solid #4C3DB2;
+  background: transparent;
+  color: #4C3DB2;
+}
+.popup-cart .popup-content #close-popup {
+  margin: 0 auto;
+  padding: 18px 61px;
+  width: 176px;
+  display: flex;
+  justify-content: center;
+  font-size: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  border: 1px solid #4C3DB2;
+  background: transparent;
+  color: #4C3DB2;
+}/*# sourceMappingURL=cart.css.map */
